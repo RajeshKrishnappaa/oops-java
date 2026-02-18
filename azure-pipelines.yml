@@ -1,0 +1,21 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- deployment: DeployToAzureDSA
+  displayName: "Deploy job to azure_dsa"
+  environment: azure_dsa   # <-- This will show up in Environments section
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - script: echo "Hello, world! Deploying to azure_dsa environment"
+          displayName: 'Run a one-line script'
+
+        - script: |
+            echo "Add other tasks to build, test, and deploy your project."
+            echo "See https://aka.ms/yaml"
+          displayName: 'Run a multi-line script'
