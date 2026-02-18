@@ -6,7 +6,7 @@ class Animal{
 
 class Dog extends Animal{  //Dog inherits Animal class
     void barks(){
-        System.out.println("Dog is barking");
+        System.out.println("Dog is barking bow bow");
     }
 }
 
